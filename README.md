@@ -1,38 +1,55 @@
-# NLP Profile Analysis Dashboard
+# Institution Profiles Explorer
 
-> Flagship — AI/ML · Birzeit University Computer Engineering portfolio
+> AI/NLP portfolio project · Python · Streamlit · Data analysis
 
-A Python NLP project that collects profile data, analyzes text and metadata, evaluates profile-level metrics, and presents results through a GUI with exported CSV summaries.
+An interactive application for exploring structured institution profiles. It loads normalized profile data, supports multi-criteria filtering and full-text search, and presents detailed records through a clean Streamlit interface.
+
+![Application interface](GUI.png)
+
+## Highlights
+
+- Interactive filtering by institution type, country, and founding year
+- Full-text search across names, summaries, and long-form profiles
+- Data normalization and analysis with pandas
+- Evaluation metrics and CSV reporting
+- Visual summaries and a browser-based Streamlit interface
+
+## Tech stack
+
+Python · Streamlit · pandas · NLP/data processing · CSV/JSON
+
+## Run locally
+
+```bash
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
+
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The application expects `profiles.json` in the repository root. Data-collection scripts may require separate API configuration; never commit private credentials.
+
+## Project structure
+
+- `app.py` — Streamlit application and interactive filters
+- `data_collector.py` — profile data collection workflow
+- `nlp.py` — text-processing logic
+- `evaluate_profiles_metrics.py` — evaluation and reporting
+- `metrics_summary.csv`, `stats_by_year.csv` — generated summaries
+- `NLP.pdf` — project report
 
 ## What this demonstrates
 
-- Python
-- NLP
-- data collection
-- evaluation metrics
-- data visualization
-- GUI development
-
-## Repository contents
-
-`app.py` is the likely application entry point; analysis modules and exported summaries are stored alongside it.
-
-## Getting started
-
-Create a virtual environment, inspect imports to install required packages, then run `python app.py`. API-dependent collection may require user-provided configuration.
-
-> This is an academic project preserved as portfolio evidence. Review and configure any environment-specific paths, credentials, hardware pins, or dependencies before running it.
-
-## Related portfolio work
-
-- [Machine-Learning](https://github.com/NManassra/Machine-Learning)
-- [Machine-Learning_2](https://github.com/NManassra/Machine-Learning_2)
-- [Spoken-Language-Processing](https://github.com/NManassra/Spoken-Language-Processing)
+Practical Python development, data pipelines, search/filter UX, evaluation, visualization, and communicating AI/NLP results through a usable product.
 
 ## Credits
 
-Academic/portfolio work by Noura Manassra. Original commit history is preserved.
+Academic team project. Noura Manassra's portfolio copy preserves the original work and commit history.
 
-## Portfolio focus
+## Portfolio context
 
-This repository supports my broader focus on **Backend + AI engineering**, including APIs, data, intelligent systems, security, systems fundamentals, and practical problem-solving.
+This project supports my **Full-Stack + AI** focus: transforming data and language-processing workflows into an accessible application experience.
